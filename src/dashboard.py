@@ -9,6 +9,7 @@ import sys
 # Importa o gerenciador do arquivo cliente.py
 from src.cliente import GerenciadorClientes 
 from src.produto import GerenciadorProdutos
+from src.vendas import GerenciadorVendas
 
 class TelaDashboard(QtWidgets.QWidget):
 
@@ -43,6 +44,7 @@ class TelaDashboard(QtWidgets.QWidget):
         # Passamos 'self' (esta classe) para que o cliente.py consiga ler os componentes da tela
         self.gerenciador_clientes = GerenciadorClientes(self)
         self.gerenciador_produtos = GerenciadorProdutos(self)
+        self.gerenciador_vendas = GerenciadorVendas(self)
 
     def alternar_menu(self):
         """Executa a animação de abrir e fechar o menu esquerdo."""
